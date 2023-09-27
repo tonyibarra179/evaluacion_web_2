@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Mi Pagina Web</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+		<form method="POST" action="" >
+		    <div>
+		    	<div>
+		    		<label class="margenLabels"><b>Region</b>:</label>
+		    		<label id="idRegion"class="iP-Region"></label>
+		    		<br>
+		    		<label class="margenLabels"><b>IP</b>:</label>
+		    		<label id="idIp" class="iP-Region"></label>
+		    	</div>
+
+			    	<div style="margin: 10px;">
+			    	<button type="button" id="btnMandarCall" name="btnMandarCall" onclick="CallApiRest()">
+						<i >Consumir Servicio php</i>
+			        </button>	        
+			        <input type="hidden" name="nombreArchivo" value="Respuesta1">
+			        <!-- <button type="submit"><i>Exportar JSON</i></button> -->
+		        </div>
+
+		        <br>
+		        <div>                                 
+		            <table class="table">
+		            	<thead>
+		            		<tr>
+		            			<td class="encabezado">Tipo</td>
+		            			<td class="encabezado">Color</td>
+		            			<td class="encabezado">Tamaño</td>
+		            			<!--Se agregó la etiqueta lang="es" y el charset="UTF-8" para poder agregar la ñ de forma nativa-->
+		            		</tr>
+		            	</thead>
+		            	<tbody id="filaRespuesta">
+		            		
+		            	</tbody>
+		            </table>
+		        </div>
+
+		    </div>
+		</form>
+	<input type="hidden" id="ruta" name="num_mesero" value="<?php echo $Server; ?>">
+	</body>
+</html>
+<script src="codigo.js"></script> 
